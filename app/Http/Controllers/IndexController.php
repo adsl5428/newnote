@@ -9,8 +9,8 @@ use App\Http\Requests;
 class IndexController extends Controller
 {
     //
-    public function Index()
+    public function index()
     {
-        return view('articles');
+        return view('index');
     }
 }

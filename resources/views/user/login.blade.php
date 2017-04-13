@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>登录</title>
 </head>
 <body>
-<h1>文章列表</h1>
-<hr>
 
 </body>
 </html>
