@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', 'IndexController@Index') ;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,7 +25,9 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+Route::get('/login','UserController@login');
+Route::post('/login','UserController@login');
 Route::group(['middleware' => ['web']], function () {
     //
+
 });
