@@ -15,7 +15,8 @@
 //    return view('welcome');
 //});
 Route::get('/hi', function () {
-    return view('welcome');
+    $msg='账号或密码错误';
+    //return view('user.login',compact('msg'));
 });
 /*
 |--------------------------------------------------------------------------
@@ -27,12 +28,26 @@ Route::get('/hi', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::get('/', 'IndexController@index') ;
-Route::get('/login','UserController@login');
 
 
-Route::post('/login','UserController@login');
+
+//Route::post('/login','MyuserControllger@login');
 Route::group(['middleware' => ['web']], function () {
-    //
 
+ //   Route::get('/', 'IndexController@index');
+      Route::get('/', 'ArticleController@index');
+     Route::get('/article/{id}', 'ArticleController@show');
+
+    Route::get('/create', 'ArticleController@create');
+    Route::post('/create1', 'ArticleController@create1');
+
+    Route::get('/logout','MyuserController@logout');
+
+    Route::get('/register','MyuserController@register');
+    Route::post('/store','MyuserController@store');
+
+    Route::get('/login','MyuserController@login');
+    Route::post('/login1','MyuserController@login1');
+
+    Route::get('/myinfo','MyuserController@myinfo');
 });
