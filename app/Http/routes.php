@@ -35,8 +35,10 @@ Route::get('/hi', function () {
 Route::group(['middleware' => ['web']], function () {
 
  //   Route::get('/', 'IndexController@index');
-      Route::get('/', 'ArticleController@index');
-     Route::get('/article/{id}', 'ArticleController@show');
+    Route::get('/', 'ArticleController@index');
+    Route::get('/article/{id}', 'ArticleController@show');
+
+    Route::get('/fenlei/{id}', 'ArticleController@fenlei');
 
     Route::get('/create', 'ArticleController@create');
     Route::post('/create1', 'ArticleController@create1');

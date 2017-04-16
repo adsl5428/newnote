@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Myuser;
 use function compact;
 use function dd;
@@ -23,7 +24,8 @@ class MyuserController extends Controller
         {
             return redirect('/login');
         }
-        return view('user.myinfo');
+        $articles=Article::where('editor',session('name'))->get();
+        return view('user.myinfo',compact('articles'));
     }
     public function login1()
     {
@@ -38,7 +40,8 @@ class MyuserController extends Controller
             else
             {
                 session(['name'=>$input['name']]);
-                return view('user.myinfo');
+                //return view('user.myinfo');
+                return redirect('myinfo');
             }
     }
 
