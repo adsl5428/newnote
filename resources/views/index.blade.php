@@ -23,6 +23,7 @@
         </content>
     @endforeach
 @endif
+{{$articles->links() }}
 <body>
 
 </body>

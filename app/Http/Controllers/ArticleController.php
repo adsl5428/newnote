@@ -21,7 +21,7 @@ class ArticleController extends Controller
     public function Index ()
     {
         $fenleis=Fenlei::all();
-        $articles = Article::latest()->get();
+        $articles = Article::latest()->paginate(10);//
         //dd($articles);
         //return $articles;
         return view('index', compact('articles','fenleis'));
