@@ -35,6 +35,9 @@ Route::get('/hi', function () {
 Route::group(['middleware' => ['web']], function () {
 
  //   Route::get('/', 'IndexController@index');
+    Route::any('/test', 'FileController@upload');
+
+
     Route::get('/', 'ArticleController@index');
     Route::get('/article/{id}', 'ArticleController@show');
 

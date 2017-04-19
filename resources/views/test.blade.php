@@ -37,6 +37,11 @@
     </style>
 </head>
 <body>
+<form method="post" enctype="multipart/form-data" >
+    {{csrf_field()}}
+    <input type="file" name="picture">
+    <button type="submit"> 提交 </button>
+</form>
 <div class="container">
     <div class="content">
         <div class="title"></div>
