@@ -11,9 +11,9 @@
                     </div>
                     <div class="weui-uploader__bd">
                         <ul class="weui-uploader__files" id="uploaderFiles">
-                            <li class="weui-uploader__file" style="background-image:url(./images/pic_160.png)"></li>
-                            <li class="weui-uploader__file" style="background-image:url(./images/pic_160.png)"></li>
-                            <li class="weui-uploader__file" style="background-image:url(./images/pic_160.png)"></li>
+                            <li class="weui-uploader__file" style="background-image:url(./public/images/pic_160.png)"></li>
+                            <li class="weui-uploader__file" style="background-image:url(./public/images/pic_160.png)"></li>
+                            <li class="weui-uploader__file" style="background-image:url(./public/images/pic_160.png)"></li>
                             <li class="weui-uploader__file weui-uploader__file_status" style="background-image:url(./images/pic_160.png)">
                                 <div class="weui-uploader__file-content">
                                     <i class="weui-icon-warn"></i>
