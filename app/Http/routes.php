@@ -31,12 +31,21 @@ Route::get('/hi', function () {
 
 
 
-//Route::post('/login','MyuserControllger@login');
+Route::any('/test', 'FileController@upload');
+
+Route::get('/master', function ()
+{
+    return view('master');
+});
+
+//
 Route::group(['middleware' => ['web']], function () {
 
- //   Route::get('/', 'IndexController@index');
-    Route::any('/test', 'FileController@upload');
+    Route::get('/w', 'wap\ArticleController@index');
+    Route::get('/u', 'wap\ArticleController@upload');
 
+ //   Route::get('/', 'IndexController@index');
+    Route::post('/login','MyuserControllger@login');
 
     Route::get('/', 'ArticleController@index');
     Route::get('/article/{id}', 'ArticleController@show');

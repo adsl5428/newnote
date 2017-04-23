@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-{{$xx}}
+
 <head>
     <title>Laravel</title>
 
