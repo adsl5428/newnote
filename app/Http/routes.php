@@ -34,6 +34,17 @@ Route::get('/master', function ()
 {
     return view('master');
 });
+
+Route::get('/mail', function ()
+{
+    Mail::raw('test mail', function ($m) {
+        $m->from('lihongcheng@fnjr2017.com', 'User');
+        $m->to('343739868@qq.com')->subject('test email');
+    });
+    return 1;
+});
+
+
 Route::any('/u', 'FileController@upload');
 Route::any('/upload.php', 'FileController@upload');
 //
