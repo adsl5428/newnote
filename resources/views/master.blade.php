@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="./public/css/weui.css">
-    <link rel="stylesheet" href="./public/css/ex.css">
+    <link rel="stylesheet" href="./css/weui.css">
+    <link rel="stylesheet" href="./css/ex.css">
+    {{--<link rel="stylesheet" href="./css/demo.css">--}}
     {{--<link rel="stylesheet" href="/css/notebook.css">--}}
 </head>
 <style>
@@ -86,7 +87,6 @@
     {{--@yield('content')--}}
 {{--</div>--}}
 
-
 <div class="page__bd" style="height: 100%;">
     <div class="weui-tab">
         <div class="weui-tab__panel">
@@ -95,20 +95,21 @@
         <div class="weui-tabbar">
             {{--<a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">--}}
             {{--<span style="display: inline-block;position: relative;">--}}
-            {{--<img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">--}}
+            {{--<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">--}}
             {{--<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>--}}
             {{--</span>--}}
             {{--<p class="weui-tabbar__label">微信</p>--}}
             {{--</a>--}}
+
+
             <a href="javascript:;" class="weui-tabbar__item">
-                <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">首页</p>
             </a>
-
             @if( Session::get('name')==null)
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
-                    <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
                 </span>
                     <p class="weui-tabbar__label">登录</p>
@@ -116,13 +117,13 @@
             @else
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
-                    <img src=".public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
                 </span>
                     <p class="weui-tabbar__label">我</p>
                 </a>
                 <a href="javascript:;" class="weui-tabbar__item">
-                    <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">发表</p>
                 </a>
             @endif
@@ -133,10 +134,9 @@
 
 </body>
 {{--<script src="/js/jquery-1.11.2.min.js"></script>--}}
-<script src="./public/js/zepto.min.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
-<script src="./public/js/example.js"></script>
-
+{{--<script src="./js/zepto.min.js"></script>--}}
+{{--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>--}}
+{{--<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>--}}
+{{--<script src="./js/ex.js"></script>--}}
 @yield('my-js')
 </html>
