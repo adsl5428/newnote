@@ -6,11 +6,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="./css/weui.css">
     <link rel="stylesheet" href="./css/ex.css">
-<<<<<<< HEAD
-=======
-    {{--<link rel="stylesheet" href="./css/demo.css">--}}
->>>>>>> 75202a0cfc24deb885220b10d4b49a6371cadbc6
-    {{--<link rel="stylesheet" href="/css/notebook.css">--}}
+
 </head>
 <style>
     /*.button-sp-area{margin:0 auto;padding:15px 0;width:60%}*/

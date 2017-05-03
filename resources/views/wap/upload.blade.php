@@ -1,5 +1,6 @@
 
 @extends('master')
+
 @section('title','我的记事本')
 @section('content')
 
