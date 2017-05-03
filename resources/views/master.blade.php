@@ -6,6 +6,10 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="./css/weui.css">
     <link rel="stylesheet" href="./css/ex.css">
+<<<<<<< HEAD
+=======
+    {{--<link rel="stylesheet" href="./css/demo.css">--}}
+>>>>>>> 75202a0cfc24deb885220b10d4b49a6371cadbc6
     {{--<link rel="stylesheet" href="/css/notebook.css">--}}
 </head>
 <style>
@@ -100,7 +104,6 @@
     {{--@yield('content')--}}
 {{--</div>--}}
 
-
 <div class="page__bd" style="height: 100%;">
     <div class="weui-tab">
         <div class="weui-tab__panel">
@@ -114,11 +117,12 @@
             {{--</span>--}}
             {{--<p class="weui-tabbar__label">微信</p>--}}
             {{--</a>--}}
+
+
             <a href="javascript:;" class="weui-tabbar__item">
                 <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">首页</p>
             </a>
-
             @if( Session::get('name')==null)
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
@@ -130,7 +134,9 @@
             @else
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
+
                     <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+
                     <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
                 </span>
                     <p class="weui-tabbar__label">我</p>
@@ -146,15 +152,15 @@
 
 
 </body>
+
 {{--<script src=".//js/zepto.min.js"></script>--}}
 {{--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>--}}
 {{--<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>--}}
 {{--<script src=".//js/ex.js"></script>--}}
-{{--<script src=".//js/jquery-1.11.1.js"></script>--}}
-{{--<script src="./js/jquery-1.10.2.min.js"></script>--}}
-{{--<script src="./js/jquery.js"></script>--}}
+
 <script src="./js/plupload.full.min.js"></script>
 <script src="./js/moxie.min.js"></script>
+
 
 @yield('my-js')
 </html>

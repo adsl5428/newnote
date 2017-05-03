@@ -30,24 +30,42 @@ Route::get('/hi', function () {
 */
 Route::any('/wechat', 'WechatController@serve');
 
+
 Route::any('/upload.php', 'wap\ArticleController@upload');
 
 Route::any('/test', 'FileController@upload');
+
 
 Route::get('/master', function ()
 {
     return view('master');
 });
 
+Route::get('/mail', function ()
+{
+    Mail::raw('test mail', function ($m) {
+        $m->from('lihongcheng@fnjr2017.com', 'User');
+        $m->to('343739868@qq.com')->subject('test email');
+    });
+    return 1;
+});
+
+
+Route::any('/u', 'FileController@upload');
+Route::any('/upload.php', 'FileController@upload');
 //
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/w', 'wap\ArticleController@index');
+
     Route::get('/u', 'wap\ArticleController@up');
     Route::any('/uu', 'wap\ArticleController@uploader');
     Route::post('/u/uploader', 'wap\ArticleController@uploader');
     Route::any('/uu/uploader', 'wap\ArticleController@uploader');
 
+
+
+//    Route::get('/u', 'wap\ArticleController@upload');
 
 
  //   Route::get('/', 'IndexController@index');
