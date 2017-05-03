@@ -28,8 +28,9 @@ Route::get('/hi', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::any('/wechat', 'WechatController@serve');
 
-
+Route::any('/upload.php', 'wap\ArticleController@upload');
 
 Route::any('/test', 'FileController@upload');
 
@@ -42,7 +43,12 @@ Route::get('/master', function ()
 Route::group(['middleware' => ['web']], function () {
 
     Route::get('/w', 'wap\ArticleController@index');
-    Route::get('/u', 'wap\ArticleController@upload');
+    Route::get('/u', 'wap\ArticleController@up');
+    Route::any('/uu', 'wap\ArticleController@uploader');
+    Route::post('/u/uploader', 'wap\ArticleController@uploader');
+    Route::any('/uu/uploader', 'wap\ArticleController@uploader');
+
+
 
  //   Route::get('/', 'IndexController@index');
     Route::post('/login','MyuserControllger@login');

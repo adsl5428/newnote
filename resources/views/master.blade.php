@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" href="./public/css/weui.css">
-    <link rel="stylesheet" href="./public/css/ex.css">
+    <link rel="stylesheet" href="./css/weui.css">
+    <link rel="stylesheet" href="./css/ex.css">
     {{--<link rel="stylesheet" href="/css/notebook.css">--}}
 </head>
 <style>
@@ -79,6 +79,20 @@
         -webkit-line-clamp: 2;
     }
     }
+    body{ font-size: 12px;}
+    body,p,div{ padding: 0; margin: 0;}
+    .wraper{ padding: 30px 0;}
+    .btn-wraper{ text-align: center;}
+    .btn-wraper input{ margin: 0 10px;}
+    #file-list{ width: 350px; margin: 20px auto;}
+    #file-list li{ margin-bottom: 10px;}
+    .file-name{ line-height: 30px;}
+    .progress{ height: 4px; font-size: 0; line-height: 4px; background: orange; width: 0;}
+    .tip1{text-align: center; font-size:14px; padding-top:10px;}
+    .tip2{text-align: center; font-size:12px; padding-top:10px; color:#b00}
+    .catalogue{ position: fixed; _position:absolute; _width:200px; left: 0; top: 0; border: 1px solid #ccc;padding: 10px; background: #eee}
+    .catalogue a{ line-height: 30px; color: #0c0}
+    .catalogue li{ padding: 0; margin: 0; list-style: none;}
 </style>
 <body >
 
@@ -95,20 +109,20 @@
         <div class="weui-tabbar">
             {{--<a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">--}}
             {{--<span style="display: inline-block;position: relative;">--}}
-            {{--<img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">--}}
+            {{--<img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">--}}
             {{--<span class="weui-badge" style="position: absolute;top: -2px;right: -13px;">8</span>--}}
             {{--</span>--}}
             {{--<p class="weui-tabbar__label">微信</p>--}}
             {{--</a>--}}
             <a href="javascript:;" class="weui-tabbar__item">
-                <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                 <p class="weui-tabbar__label">首页</p>
             </a>
 
             @if( Session::get('name')==null)
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
-                    <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
                 </span>
                     <p class="weui-tabbar__label">登录</p>
@@ -116,13 +130,13 @@
             @else
                 <a href="javascript:;" class="weui-tabbar__item">
                 <span style="display: inline-block;position: relative;">
-                    <img src=".public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
                 </span>
                     <p class="weui-tabbar__label">我</p>
                 </a>
                 <a href="javascript:;" class="weui-tabbar__item">
-                    <img src="./public/images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
+                    <img src="./images/icon_tabbar.png" alt="" class="weui-tabbar__icon">
                     <p class="weui-tabbar__label">发表</p>
                 </a>
             @endif
@@ -132,11 +146,15 @@
 
 
 </body>
-{{--<script src="/js/jquery-1.11.2.min.js"></script>--}}
-<script src="./public/js/zepto.min.js"></script>
-<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
-<script src="./public/js/example.js"></script>
+{{--<script src=".//js/zepto.min.js"></script>--}}
+{{--<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>--}}
+{{--<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>--}}
+{{--<script src=".//js/ex.js"></script>--}}
+{{--<script src=".//js/jquery-1.11.1.js"></script>--}}
+{{--<script src="./js/jquery-1.10.2.min.js"></script>--}}
+{{--<script src="./js/jquery.js"></script>--}}
+<script src="./js/plupload.full.min.js"></script>
+<script src="./js/moxie.min.js"></script>
 
 @yield('my-js')
 </html>
